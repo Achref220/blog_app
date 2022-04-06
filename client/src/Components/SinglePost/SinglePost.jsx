@@ -10,7 +10,7 @@ const SinglePost = () => {
     const path = location.pathname.split("/")[2];
     const PF = "https://blogappdot.herokuapp.com/images/";
     const { user } = useContext(Context);
-    const [post, setPost] = useState({});
+    const [post, setPost] = useState([]);
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("")
     const [updateMode, setUpdateMode] = useState(false)
