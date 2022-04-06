@@ -14,10 +14,11 @@ const categoryRoute = require("./routes/categories");
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors());
 dotenv.config();
 app.use(express.json());
-app.use(cors());
-app.use("/images", express.static(path.join(__dirname, "/images")))
+
+
 connectDB();
 
 const storage = multer.diskStorage({
@@ -32,6 +33,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
+
+app.use("/images", express.static(path.join(__dirname, "/images")))
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../client/build'));
