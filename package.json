@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cd api && node server.js",
     "back": "cd api && nodemon server.js",
     "front": "cd client && npm start",
     "dev": "concurrently  \"npm run back\" \"npm run front \"",
