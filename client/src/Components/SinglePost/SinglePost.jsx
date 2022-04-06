@@ -8,15 +8,15 @@ import './SinglePost.css';
 const SinglePost = () => {
     const location = useLocation()
     const path = location.pathname.split("/")[2];
-    const PF = "https://blogappdot.herokuapp.com/images/";
+    const PF = "http://localhost:5000/images/";
     const { user } = useContext(Context);
-    const [post, setPost] = useState([]);
+    const [post, setPost] = useState({});
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("")
     const [updateMode, setUpdateMode] = useState(false)
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get("https://blogappdot.herokuapp.com/posts/" + path);
+            const res = await axios.get("http://localhost:5000/posts/" + path);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -26,7 +26,7 @@ const SinglePost = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`https://blogappdot.herokuapp.com/posts/${post._id}`, { data : { username: user.username } })
+            await axios.delete(`http://localhost:5000/posts/${post._id}`, { data : { username: user.username } })
             window.location.replace("/")
         } catch (err) {
             console.log(err);
@@ -34,7 +34,7 @@ const SinglePost = () => {
     };
     const handleUpdate = async () => {
         try {
-            await axios.put(`https://blogappdot.herokuapp.com/posts/${post._id}`, {username: user.username, title, desc})
+            await axios.put(`http://localhost:5000/posts/${post._id}`, {username: user.username, title, desc})
             setUpdateMode(false)
         } catch (err) {
             console.log(err);

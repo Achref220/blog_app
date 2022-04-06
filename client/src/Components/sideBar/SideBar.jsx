@@ -7,7 +7,7 @@ const SideBar = () => {
     const [cats, setCats] = useState([]);
     useEffect(() => {
         const getCats = async () => {
-            const res = await axios.get("https://blogappdot.herokuapp.com/api/categories");
+            const res = await axios.get("http://localhost:5000/categories");
             setCats(res.data)
         };
         getCats();
