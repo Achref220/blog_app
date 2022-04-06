@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require("dotenv");
 const multer = require("multer");
 const path = require('path');
+const cors = require('cors')
 
 const connectDB = require("./config/connectDB");
 const authRoute = require("./routes/auth");
@@ -15,6 +16,7 @@ const port = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(express.json());
+app.use(cors());
 app.use("/images", express.static(path.join(__dirname, "/images")))
 connectDB();
 
