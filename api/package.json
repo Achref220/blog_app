@@ -10,6 +10,7 @@
     "path": "^0.12.7"
   },
   "scripts": {
+    "start": "node server.js",
     "back": "nodemon server.js",
     "front": "cd client && npm start",
     "dev": "concurrently  \"npm run back\" \"npm run front \""
