@@ -8,7 +8,7 @@ import './SinglePost.css';
 const SinglePost = () => {
     const location = useLocation()
     const path = location.pathname.split("/")[2];
-    const PF = "http://localhost:5000/images/";
+    const PF = "http://localhost:54188/images/";
     const { user } = useContext(Context);
     const [post, setPost] = useState({});
     const [title, setTitle] = useState("");
