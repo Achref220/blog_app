@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "back": "nodemon server.js",
+    "front": "cd client && npm start",
+    "dev": "concurrently  \"npm run back\" \"npm run front \""
+  },
+  "name": "api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

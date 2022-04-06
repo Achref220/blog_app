@@ -1,0 +1,69 @@
+.contact-container{
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    padding-top: 70px;
+    margin-top: 150px;
+}
+.container p{
+    color: red;
+    position: relative;
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-start;
+}
+.contact-container .title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: rgb(27, 2, 51);
+}
+.contact-container p{
+    text-align: center;
+}
+.contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+}
+.contact-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: rgb(0, 0, 80);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text:focus{
+    outline: none;
+}
+.contact-form .label{
+    position: relative;
+    bottom: 65px;
+    left: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(0, 0, 80);
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+}
+.contact-form .submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg, rgb(2, 2, 70), rgb(107, 6, 189));
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
