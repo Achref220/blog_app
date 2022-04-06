@@ -25,12 +25,12 @@ const Write = () => {
             data.append("file", file);
             newPost.photo = fileName;
             try {
-                await axios.post("http://localhost:5000/upload", data)
+                await axios.post("https://blogappdot.herokuapp.com/upload", data)
             } catch (err) {
                 console.log(err);
             };
             try {
-              const res = await axios.post("http://localhost:5000/posts", newPost)
+              const res = await axios.post("https://blogappdot.herokuapp.com/posts", newPost)
               window.location.replace("/post/" + res.data._id)
               toast.success('Post has been added')
             } catch (err) {
