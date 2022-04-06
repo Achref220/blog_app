@@ -13,7 +13,7 @@ function Settings() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const PF = "http://localhost:54188/images/";
+    const PF = "/images/";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,7 +37,7 @@ function Settings() {
                 console.log(err);
             };
             try {
-              const res = await axios.put("http://localhost:54188/users/" + user._id, updatedUser);
+              const res = await axios.put("/users/" + user._id, updatedUser);
               dispatch({type: "UPDATE_SUCCESS", payload: res.data})
               toast.success("Profile has been updated !")
             } catch (err) {
@@ -50,7 +50,7 @@ function Settings() {
         e.preventDefault();
         dispatch({type: "DELETE_START"})
         try {
-            await axios.delete(`http://localhost:54188/users/${user._id}`)
+            await axios.delete(`/users/${user._id}`)
             dispatch({ type: "LOGOUT" });
             dispatch({type: "DELETE_SUCCSESS"});
         } catch (err) {

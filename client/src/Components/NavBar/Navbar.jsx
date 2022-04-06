@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 const Navbar = () => {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:54188/images/"
+  const PF = "/images/"
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" })

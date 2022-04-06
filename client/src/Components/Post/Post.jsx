@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Post.css'
 
 const Post = ({ posts }) => {
-  const PF = "http://localhost:54188/images/";
+  const PF = "/images/";
   return (
     <div className='post'>
       {posts.photo && (
